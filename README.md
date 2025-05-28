@@ -55,11 +55,9 @@ Empowering HR with data-driven insights for better workforce planning.
 - Removed redundant and constant-value columns  
 - Verified feature consistency and uniqueness  
 
-### 2️⃣ Exploratory Data Analysis (EDA)  
-- **Univariate Analysis:**  
+### 2️⃣ Exploratory Data Analysis (EDA)   
   - Visualized distributions with boxplots, histograms  
   - Detected and capped outliers for robust modeling  
-- **Bivariate Analysis:**  
   - Analyzed relationships between target (Attrition / Performance) and features  
   - Performed Chi-Square tests for categorical dependencies  
   - Computed correlations for numeric features  
