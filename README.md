@@ -63,7 +63,6 @@ Empowering HR with data-driven insights for better workforce planning.
   - Computed correlations for numeric features  
 
 ### 3️⃣ Feature Engineering & Encoding  
-- Created domain-specific features like tenure buckets, engagement scores  
 - Applied encoding techniques:  
   - Binary Encoding for binary features  
   - One-Hot Encoding for multi-class categorical variables  
