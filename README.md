@@ -1,164 +1,135 @@
-💼 HR Analytics: Employee Attrition & Performance Prediction
-📊 Domain: Human Resource Analytics
-🎯 Objectives:
+# 💼 HR Analytics: Employee Attrition & Performance Prediction
+
+## 📊 Domain  
+Human Resource Analytics
 
-Predict Employee Attrition
+## 🎯 Project Objectives
+- 🚪 **Predict Employee Attrition**  
+- ⭐ **Predict Employee Performance Rating** (Classify ratings 3 vs 4)  
 
-Predict Employee Performance Rating
+---
 
-This end-to-end machine learning project focuses on building predictive models to help HR departments make proactive decisions by analyzing historical employee data. The project includes data cleaning, EDA, feature engineering, model building, evaluation, and deployment via a user-friendly Streamlit web app.
+## 🚀 Project Overview
 
-🔍 Problem Statement
-Organizations face significant challenges due to:
+This end-to-end ML project equips HR teams to proactively manage workforce challenges by leveraging historical employee data. The solution spans **data cleaning**, **EDA**, **feature engineering**, **class balancing**, **model training with cross-validation and comparison**, and deployment as a **Streamlit web app**.
 
-High attrition, which increases recruitment and training costs
+---
 
-Inconsistent performance evaluation, which affects promotions and engagement
+## 🔍 Problem Statement
 
-This project solves both problems by:
+Organizations face costly issues including:
 
-Predicting which employees are likely to leave the company
+- 🔄 **High attrition rates** leading to increased recruitment & training expenses  
+- 🎯 **Inconsistent performance evaluations** hindering fair promotions & employee engagement  
 
-Predicting which employees are likely to perform well (ratings 3 vs 4)
+Our solution predicts:
 
-Empowering HR with data-driven decision tools
+- Which employees are at risk of leaving  
+- Which employees are likely to achieve top performance ratings (3 vs 4)  
 
-🧠 Skills Applied
-Data Cleaning & Preprocessing
+Empowering HR with data-driven insights for better workforce planning.  
 
-Exploratory Data Analysis (EDA)
+---
 
-Outlier Detection & Capping
+## 🧠 Skills & Techniques Applied
 
-Feature Engineering & Selection
+- 🧹 Data Cleaning & Missing Value Handling  
+- 📈 Exploratory Data Analysis (EDA) & Outlier Capping  
+- 🛠 Feature Engineering & Encoding (Binary & One-Hot)  
+- ⚖️ Handling Imbalanced Data (SMOTE & Random Undersampling)  
+- 🔍 Model Training, Hyperparameter Tuning, & Cross-Validation  
+- 🏆 Model Comparison & Best Model Selection  
+- 💾 Model & Artifact Serialization using **joblib**  
+- 🌐 Streamlit App Deployment with Custom CSS Styling  
 
-Class Balancing (SMOTE, Under-sampling)
+---
 
-Machine Learning & Cross Validation
+## 📋 Detailed Workflow
 
-Model Deployment with Streamlit
+### 1️⃣ Data Understanding & Cleaning  
+- Identified & handled missing/duplicate data  
+- Classified features as:  
+  - Continuous Numerical  
+  - Numeric but Categorical  
+  - Pure Categorical  
+- Removed redundant and constant-value columns  
+- Verified feature consistency and uniqueness  
 
-Serialization of Models and Artifacts
+### 2️⃣ Exploratory Data Analysis (EDA)  
+- **Univariate Analysis:**  
+  - Visualized distributions with boxplots, histograms  
+  - Detected and capped outliers for robust modeling  
+- **Bivariate Analysis:**  
+  - Analyzed relationships between target (Attrition / Performance) and features  
+  - Performed Chi-Square tests for categorical dependencies  
+  - Computed correlations for numeric features  
 
-🚀 Project Workflow
-📁 1. Data Understanding & Cleaning
-Handled missing and duplicate values
+### 3️⃣ Feature Engineering & Encoding  
+- Created domain-specific features like tenure buckets, engagement scores  
+- Applied encoding techniques:  
+  - Binary Encoding for binary features  
+  - One-Hot Encoding for multi-class categorical variables  
 
-Classified columns into:
+### 4️⃣ Handling Class Imbalance  
+- **Attrition Prediction:** Applied **SMOTE** oversampling to balance minority class  
+- **Performance Rating Prediction:** Used **Random Undersampling** for balanced training  
 
-Continuous Numerical
+### 5️⃣ Feature Scaling & Data Splitting  
+- Scaled features using **MinMaxScaler** to normalize feature ranges  
+- Split data into train/test sets ensuring stratified distribution  
 
-Numeric but Categorical
+### 6️⃣ Model Training, Cross-Validation & Comparison  
+- Trained multiple candidate models:  
+  - Random Forest, XGBoost, SVM, K-Nearest Neighbors, Logistic Regression, Decision Tree  
+- Used **Stratified K-Fold Cross-Validation** for robust performance estimation  
+- Evaluated models on:  
+  - Accuracy, Precision, Recall, F1-Score, ROC-AUC  
+- Compared models and selected the best performer based on highest F1-Score and balanced metrics  
 
-Pure Categorical
+### 7️⃣ Model Serialization  
+- Saved the best performing models and preprocessing artifacts using **joblib** for efficient loading:  
+  - Model files (`.joblib`)  
+  - Scaler  
+  - Encoders  
+  - Selected top features list  
 
-Dropped unnecessary or constant columns
+### 8️⃣ Streamlit Web App Deployment  
+- Developed an interactive app featuring:  
+  - **Attrition Prediction Module:** Risk prediction with user-friendly input forms & results display  
+  - **Performance Rating Prediction Module:** Predicts if an employee will get rating 3 or 4  
+- Backend uses serialized `.joblib` models for instant inference  
+- Applied sleek custom CSS for an engaging UI experience  
 
-Checked uniqueness and consistency across features
+---
 
-📊 2. Exploratory Data Analysis (EDA)
-🔹 Univariate Analysis
-Boxplots and distribution plots to detect outliers
+## 🧰 Tech Stack
 
-Capped extreme values in continuous features
+| Category           | Tools & Libraries                                   |
+|--------------------|----------------------------------------------------|
+| Programming        | Python (Pandas, NumPy, Scikit-learn, XGBoost)      |
+| Data Imbalance     | Imbalanced-learn (SMOTE, Random Undersampling)      |
+| Model Serialization| joblib                                              |
+| Visualization      | Matplotlib, Seaborn                                 |
+| Web App            | Streamlit                                          |
 
-Analyzed skewness before and after capping
+---
 
-Studied distribution of categorical columns
+## ✅ Key Results Summary
 
-🔹 Bivariate Analysis
-Target (Attrition / Performance Rating) vs:
+- 🚀 Achieved **F1-Scores above 90%** on balanced test sets for both prediction tasks  
+- 🔄 Stable and consistent cross-validation results proving model robustness  
+- ⚡ Real-time, deployable app enabling HR to make informed, proactive decisions  
 
-Continuous numerical features
+---
 
-Numeric-but-categorical features
+## 🧑‍💻 Author
 
-Categorical features
+Built with ❤️ by **[PREETHI S]**
 
-Performed Chi-Square Tests for independence
+---
 
-Assessed correlation with targets for all feature types
+## 🏷️ Tags
 
-🧬 3. Feature Engineering & Encoding
-Created meaningful features (e.g., tenure buckets, engagement score)
+`#HRAnalytics` `#EmployeeAttrition` `#EmployeePerformance` `#MachineLearning` `#DataScience` `#Python` `#ScikitLearn` `#XGBoost` `#SMOTE` `#ImbalancedLearning` `#Joblib` `#Streamlit` `#ModelDeployment` `#PredictiveModeling` `#CrossValidation` `#FeatureEngineering` `#DataPreprocessing` `#HumanResources` `#AIForHR`
 
-Applied:
-
-Binary Encoding for binary features
-
-One-Hot Encoding for multi-class features
-
-⚖️ 4. Handling Imbalanced Data
-For Attrition prediction: applied SMOTE Oversampling
-
-For Performance Rating prediction: applied Random Undersampling
-
-📏 5. Feature Scaling & Splitting
-Scaled features using MinMaxScaler
-
-Split datasets into train and test sets for model training
-
-🌲 6. Model Building & Evaluation
-✔ Attrition Prediction
-Trained models: Random Forest, XGBoost, SVM, KNN, Logistic Regression, Decision Tree
-
-Selected Top 15 features using feature importance
-
-Evaluated models using:
-
-Accuracy, Precision, Recall, F1-Score, ROC-AUC
-
-Cross-validated for robustness
-
-📈 Performance Rating Prediction (3 vs 4)
-Similar workflow with undersampled dataset
-
-Top 15 features identified from Random Forest
-
-Trained and compared all models on balanced data
-
-💾 7. Model Saving
-Saved key artifacts:
-
-Final trained models for both tasks
-
-Scaler
-
-Encoders
-
-Top 15 feature sets
-
-Full encoded feature list
-
-🎯 8. Streamlit App Deployment
-Developed a sleek and intuitive Streamlit Web App for both use cases:
-
-🔍 Attrition Prediction Module
-
-Predicts whether an employee is at risk of leaving
-
-Visual display of prediction and input summary
-
-📊 Performance Rating Prediction Module
-
-Predicts if an employee will be rated 3 or 4
-
-Built for proactive appraisal planning
-
-🔧 Backend uses serialized .pkl files for model inference
-💡 CSS custom styling applied for a beautiful UI
-
-🧰 Tech Stack
-Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Imbalanced-learn)
-
-Streamlit (Web App)
-
-Pickle (Model and artifact saving)
-
-✅ Results Summary
-Achieved high F1-Scores > 90% on balanced data for both tasks
-
-Reliable cross-validation performance
-
-Deployable, real-time app for HR decision-making
 
